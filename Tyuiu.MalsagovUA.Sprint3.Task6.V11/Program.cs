@@ -4,40 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.MalsagovUA.Sprint3.Task5.V6.Lib;
-namespace Tyuiu.MalsagovUA.Sprint3.Task5.V6
+using Tyuiu.MalsagovUA.Sprint3.Task6.V11.Lib;
+namespace Tyuiu.MalsagovUA.Sprint3.Task6.V11
 {
     class Program
     {
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            int startValue1 = 1;
-            int startValue2 = 1;
-            int stopValue1 = 3;
-            int stopValue2 = 10;
+            int startValue = 10;
+            int stopValue = 19;
             Console.Title = "Спринт #3 | Выполнил: Мальсагов У.А. | АСОиУБ-23-2";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
-            Console.WriteLine("* Тема: Вложенные циклы                                                   *");
-            Console.WriteLine("* Задание #5                                                              *");
-            Console.WriteLine("* Вариант #6                                                              *");
+            Console.WriteLine("* Тема: Обработка целочисленной информации                                *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #11                                                             *");
             Console.WriteLine("* Выполнил: Мальсагов Умар Асланович | АСОиУБ-23-2                        *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Вычислить сумму ряда.                                                   *");
+            Console.WriteLine("* Напишите программу, которая ищет среди целых чисел, принадлежащих       *");
+            Console.WriteLine("* числовому отрезку [10, 19] количество всех делителей больше 10.         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine($"Старт шага первой суммы ряда: {startValue1}");
-            Console.WriteLine($"Конец шага первой суммы ряда: {startValue2}");
-            Console.WriteLine($"Старт шага второй суммы ряда: {stopValue1}");
-            Console.WriteLine($"Конец шага второй суммы ряда: {stopValue2}");
+            Console.WriteLine($"Начало цикла: {startValue}");
+            Console.WriteLine($"Конец цикла: {stopValue}");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.Write($"Результат = {ds.GetSumSumSeries(startValue1, startValue2, stopValue1, stopValue2)}");
+            int res = ds.GetSumTheDivisors(startValue, stopValue);
+            Console.Write($"Количество делителей: {res}");
             Console.ReadKey();
         }
     }
