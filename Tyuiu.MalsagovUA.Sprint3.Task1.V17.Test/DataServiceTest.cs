@@ -11,9 +11,10 @@ namespace Tyuiu.MalsagovUA.Sprint3.Task1.V17.Test
         public void ValidGetSumSeries()
         {
             DataService ds = new DataService();
+            int value = 1;
             int startValue = 1;
             int stopValue = 4;
-            double res = ds.GetSumSeries(startValue, stopValue);
+            double res = ds.GetMultiplySeries(value, startValue, stopValue);
             double wait = 482982.891;
             Assert.AreEqual(wait, res);
         }
